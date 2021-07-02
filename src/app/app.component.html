@@ -2,30 +2,21 @@
   <div class="box">
     Adventures
 
-    <app-adventure *ngFor="let x of adventures"
-      [adventure]="x"
-    ></app-adventure>
-
+    <button class="round-button" (click)="openDialog()">+</button>
+    <div class="adventure-container">
+      <app-adventure *ngFor="let adventure of adventures"
+      [adventure]="adventure"
+      ></app-adventure>
+    </div>
   </div>
 
   <div class="box">
-
     NPCs 
-
   </div>
 
   <div class="box">
-
     Players 
-
   </div>
 </div>
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <router-outlet></router-outlet>
