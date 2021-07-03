@@ -11,12 +11,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
+import { AdventureDetailComponent } from './adventure/adventure-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdventureComponent,
     DialogOverviewExampleDialog,
+    AdventureDetailComponent
   ],
   imports: [
     BrowserModule,
