@@ -1,8 +1,14 @@
-<h1 mat-dialog-title>Hi {{data.name}}</h1>
+<h1 mat-dialog-title>Add a new Adventure</h1>
 <div mat-dialog-content>
-  <p>What's your favorite animal?</p>
+  <p>Adventure Title</p>
   <mat-form-field>
     <input matInput>
+  </mat-form-field>
+  <p>Date of Adventure</p>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker ></mat-datepicker>
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
