@@ -26,14 +26,17 @@ export class HomeComponent {
 
   adventures : Adventure[] = [
     {
+      id: 1,
       title: "Testing my first Adventure that's really fricking long",
       date: new Date().toLocaleString()
     },
     {
+      id: 2,
       title: "Two objects",
       date: "6/30/2021"
     },
     {
+      id: 3,
       title: "third adventure",
       date: "6/22/2021"
     }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Adventure } from '../model/adventure';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-adventure-detail',
@@ -8,10 +9,15 @@ import { Adventure } from '../model/adventure';
 })
 export class AdventureDetailComponent implements OnInit {
   @Input() adventure!: Adventure;
-  
-  constructor() { }
+  id: number = 0;
 
-  ngOnInit(): void {
-  }
+  constructor(
+    private route: ActivatedRoute,
+  ) {}
 
+ngOnInit() {
+  this.id = this.route.snapshot.params.id;
+  };
 }
+
+
