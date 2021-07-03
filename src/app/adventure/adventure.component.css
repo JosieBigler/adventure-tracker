@@ -5,6 +5,7 @@
   width: 250px;
   height: 100px;
   flex-grow: 1;
+  cursor: pointer;
 }
 
 /* On mouse-over, add a deeper shadow */
