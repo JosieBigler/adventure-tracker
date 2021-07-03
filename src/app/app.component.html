@@ -2,7 +2,7 @@
   <div class="box">
     Adventures
 
-    <button class="round-button" (click)="openDialog()">+</button>
+    <button mat-button class="round-button" (click)="openDialog()">+</button>
     <div class="adventure-container">
       <app-adventure *ngFor="let adventure of adventures"
       [adventure]="adventure"
