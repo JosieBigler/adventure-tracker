@@ -2,16 +2,16 @@
 <div mat-dialog-content>
   <p>Adventure Title</p>
   <mat-form-field>
-    <input matInput>
+    <input matInput [(ngModel)]="data.title">
   </mat-form-field>
   <p>Date of Adventure</p>
   <mat-form-field>
-    <input matInput [matDatepicker]="picker">
+    <input matInput [matDatepicker]="picker" [(ngModel)]="data.date">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker ></mat-datepicker>
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
 </div>

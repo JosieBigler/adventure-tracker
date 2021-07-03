@@ -2,11 +2,6 @@ import { Component, Inject } from '@angular/core';
 import { Adventure } from './model/adventure';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -25,6 +20,7 @@ export class AppComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
+      this.adventures.push(result);
     });
   }
 
@@ -52,7 +48,7 @@ export class DialogOverviewExampleDialog {
 
   constructor(
     public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+    @Inject(MAT_DIALOG_DATA) public data: Adventure) {}
 
   onNoClick(): void {
     this.dialogRef.close();
