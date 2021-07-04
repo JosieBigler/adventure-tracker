@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent, DialogOverviewExampleDialog } from './home.component';
 import { AdventureComponent } from './adventure/adventure.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { MatFormFieldModule, } from '@angular/material/form-field';
+import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS, } from '@angular/material/form-field';
 import { MatInputModule, } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -33,7 +33,7 @@ import { AppComponent } from './app.component';
     MatNativeDateModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
