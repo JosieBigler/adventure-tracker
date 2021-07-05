@@ -8,17 +8,17 @@ export class AdventureService {
       {
         id: 1,
         title: "Testing my first Adventure that's really fricking long",
-        date: new Date().toLocaleString()
+        date: new Date()
       },
       {
         id: 2,
         title: "Two objects",
-        date: "6/30/2021"
+        date: new Date("6/30/2021")
       },
       {
         id: 3,
         title: "third adventure",
-        date: "6/22/2021"
+        date: new Date("6/22/2021")
       }
     ]
 
@@ -32,6 +32,13 @@ export class AdventureService {
     }
 
     getAdventure(id: number): Adventure {
-      return this.adventures.find(x => x.id == id) || {id: 0, title: "", date: ""}
+      return this.adventures.find(x => x.id == id) || {id: 0, title: "", date: new Date()}
+    }
+
+    updateAdventure(adventure: Adventure){
+      let index = this.adventures.findIndex(adv => adv.id == adventure.id);
+      if(index > -1){
+        this.adventures[index] = adventure; 
+      }
     }
   }

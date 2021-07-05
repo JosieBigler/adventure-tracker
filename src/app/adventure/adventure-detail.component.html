@@ -4,7 +4,7 @@
     <div class="form-container">
         <mat-form-field floatLabel="always">
             <mat-label>Title</mat-label>
-            <input matInput  class="example-right-align" placeholder="adventure title">
+            <input matInput  class="example-right-align" placeholder="adventure title" [(ngModel)]="adventure.title" >
         </mat-form-field>
 
         <mat-form-field floatLabel="always">
@@ -12,14 +12,13 @@
             <input matInput [matDatepicker]="picker" [(ngModel)]="adventure.date" >
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker ></mat-datepicker>
-            <!-- <input matInput  class="example-right-align" placeholder="adventure title"> -->
         </mat-form-field>
 
 
 
         <mat-form-field floatLabel="always">
             <mat-label>Synopsis</mat-label>
-            <input matInput  class="example-right-align" placeholder="adventure title">
+            <input matInput  class="example-right-align" placeholder="adventure title" [(ngModel)]="adventure.synopsis">
         </mat-form-field>
 
         <mat-form-field floatLabel="always">
@@ -33,5 +32,5 @@
         </mat-form-field>
     </div>
     
-    {{adventure.title}}
+    <button ng-click="saveAdventure()">Save</button>
 </div>

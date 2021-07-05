@@ -10,13 +10,18 @@ import {  AdventureService } from '../adventure-service';
 })
 export class AdventureDetailComponent implements OnInit {
 
-  adventure: Adventure = {id: 0, title: "", date: ""};
+  adventure: Adventure = {id: 0, title: "", date: new Date()};
 
   constructor(private route: ActivatedRoute, @Inject(AdventureService) private adventureService : AdventureService) {}
 
 ngOnInit() {
   this.adventure = this.adventureService.getAdventure(this.route.snapshot.params.id);
   };
+
+  saveAdventure(){
+      this.adventureService.updateAdventure(this.adventure);
+  }
 }
+
 
 

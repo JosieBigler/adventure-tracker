@@ -8,10 +8,12 @@ import { Adventure } from '../model/adventure';
 })
 export class AdventureComponent implements OnInit {
   @Input() adventure!: Adventure;
-  
+  prettyDate!: string;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.prettyDate = this.adventure.date.toLocaleDateString();
   }
 
 }

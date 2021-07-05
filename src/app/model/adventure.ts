@@ -1,5 +1,8 @@
 export interface Adventure{
     title: string, 
-    date: string,
-    id: number
+    date: Date,
+    id: number,
+    synopsis?: string,
+    players?: string[],
+    npcs?: string[]
 }
