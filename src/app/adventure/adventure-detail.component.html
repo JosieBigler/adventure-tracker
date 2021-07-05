@@ -2,31 +2,29 @@
     
     <button routerLink="" ng-click="saveAdventure()">back and save</button>
     <div class="form-container">
-        <mat-form-field floatLabel="always">
+        <mat-form-field floatLabel="always" class="form-full-width">
             <mat-label>Title</mat-label>
             <input matInput  class="example-right-align" placeholder="adventure title" [(ngModel)]="adventure.title" >
         </mat-form-field>
 
-        <mat-form-field floatLabel="always">
+        <mat-form-field floatLabel="always" class="form-full-width">
             <mat-label>Date</mat-label>
             <input matInput [matDatepicker]="picker" [(ngModel)]="adventure.date" >
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker ></mat-datepicker>
         </mat-form-field>
 
-
-
-        <mat-form-field floatLabel="always">
+        <mat-form-field floatLabel="always" class="form-full-width">
             <mat-label>Synopsis</mat-label>
-            <input matInput  class="example-right-align" placeholder="adventure title" [(ngModel)]="adventure.synopsis">
+            <textarea matInput  class="example-right-align" placeholder="adventure title" [(ngModel)]="adventure.synopsis"></textarea>
         </mat-form-field>
 
-        <mat-form-field floatLabel="always">
+        <mat-form-field floatLabel="always" class="form-full-width"> 
             <mat-label>Players</mat-label>
             <input matInput  class="example-right-align" placeholder="adventure title">
         </mat-form-field>
 
-        <mat-form-field floatLabel="always">
+        <mat-form-field floatLabel="always" class="form-full-width">
             <mat-label>NPCs</mat-label>
             <input matInput  class="example-right-align" placeholder="adventure title">
         </mat-form-field>

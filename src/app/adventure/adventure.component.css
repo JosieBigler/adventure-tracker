@@ -6,6 +6,8 @@
   height: 100px;
   flex-grow: 1;
   cursor: pointer;
+  margin-bottom: 15px;
+  background-color: #ffd9aa;
 }
 
 /* On mouse-over, add a deeper shadow */

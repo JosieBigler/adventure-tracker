@@ -1,8 +1,10 @@
 <div class="container">
-  <div class="box">
-    Adventures
+  <div class="box adventure">
+    <div class="box-title shadow">
+      Adventures
+      <button mat-button class="round-button" (click)="openDialog()">+</button>
+    </div>
 
-    <button mat-button class="round-button" (click)="openDialog()">+</button>
     <div class="adventure-container">
       <app-adventure *ngFor="let adventure of adventures"
       [adventure]="adventure"
@@ -10,12 +12,16 @@
     </div>
   </div>
 
-  <div class="box">
-    NPCs 
+  <div class="box npc">
+    <div class="box-title">
+      NPCs 
+    </div>
   </div>
 
-  <div class="box">
-    Players 
+  <div class="box player">
+    <div class="box-title">
+      Players 
+    </div>
   </div>
 </div>
 

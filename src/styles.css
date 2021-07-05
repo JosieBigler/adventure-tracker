@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  /* background-image: url("./assets/parchment.jpg"); */
+  background-color: #ffe9ce;
+  background-image: linear-gradient(#ffe9ce, #ad7a3c);
+  height: 100%;
+  /* font-family: "Lucida Handwriting"; */
+}
