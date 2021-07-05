@@ -13,6 +13,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { AdventureDetailComponent } from './adventure/adventure-detail.component';
 import { AppComponent } from './app.component';
+import { AdventureService } from './adventure-service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { AppComponent } from './app.component';
     MatNativeDateModule,
     FormsModule
   ],
-  providers: [{provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}],
+  providers: [{provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}, AdventureService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

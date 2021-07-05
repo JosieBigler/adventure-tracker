@@ -1,16 +1,17 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Adventure } from './model/adventure';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {  AdventureService } from './adventure-service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   title = 'adventure-tracker';
 
-  constructor(public dialog: MatDialog) {}
+  constructor(@Inject(AdventureService) private adventureService : AdventureService, public dialog: MatDialog ) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
@@ -20,27 +21,18 @@ export class HomeComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.adventures.push(result);
+      this.adventureService.addAdventure(result);
+
+      //I'm just trying to jank state for now. I'll.... fix this later, I promise.
+      //adventuresData.push(result);
     });
   }
 
-  adventures : Adventure[] = [
-    {
-      id: 1,
-      title: "Testing my first Adventure that's really fricking long",
-      date: new Date().toLocaleString()
-    },
-    {
-      id: 2,
-      title: "Two objects",
-      date: "6/30/2021"
-    },
-    {
-      id: 3,
-      title: "third adventure",
-      date: "6/22/2021"
-    }
-  ]
+  ngOnInit() {
+    this.adventures = this.adventureService.getAdventures();
+    };
+
+  adventures : Adventure[] = []
 }
 
 @Component({
