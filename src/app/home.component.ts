@@ -10,21 +10,18 @@ import {  AdventureService } from './adventure-service';
 })
 export class HomeComponent implements OnInit {
   title = 'adventure-tracker';
+  adventures : Adventure[] = []
 
   constructor(@Inject(AdventureService) private adventureService : AdventureService, public dialog: MatDialog ) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      width: '250px',
+      width: '350px',
       data: {}
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
       this.adventureService.addAdventure(result);
-
-      //I'm just trying to jank state for now. I'll.... fix this later, I promise.
-      //adventuresData.push(result);
     });
   }
 
@@ -32,7 +29,6 @@ export class HomeComponent implements OnInit {
     this.adventures = this.adventureService.getAdventures();
     };
 
-  adventures : Adventure[] = []
 }
 
 @Component({
