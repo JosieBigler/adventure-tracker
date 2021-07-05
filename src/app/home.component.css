@@ -8,6 +8,20 @@
   margin: 10px;
 }
 
+@media (max-width: 767px) {
+  .content-to-hide {
+    display: none;
+  }
+}
+
+.line-seperator {
+  border-left: 3px solid;
+  min-height: 150px;
+  max-height: 90%;
+  margin-top: 50px;
+  border-image: linear-gradient(to bottom, #7f5015, rgba(0, 0, 0, 0)) 1 100%;
+}
+
 .adventure-container {
   display: flex;
   flex-flow: row wrap;

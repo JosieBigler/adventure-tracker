@@ -1,6 +1,5 @@
 <div class="container">
-    
-    <button routerLink="" ng-click="saveAdventure()">back and save</button>
+    <button routerLink="" ng-click="saveAdventure()">Back and Save</button>
     <div class="form-container">
         <mat-form-field floatLabel="always" class="form-full-width">
             <mat-label>Title</mat-label>
@@ -16,17 +15,17 @@
 
         <mat-form-field floatLabel="always" class="form-full-width">
             <mat-label>Synopsis</mat-label>
-            <textarea matInput  class="example-right-align" placeholder="adventure title" [(ngModel)]="adventure.synopsis"></textarea>
+            <textarea matInput  class="example-right-align" placeholder="What happened in the adventure?" [(ngModel)]="adventure.synopsis"></textarea>
         </mat-form-field>
 
         <mat-form-field floatLabel="always" class="form-full-width"> 
             <mat-label>Players</mat-label>
-            <input matInput  class="example-right-align" placeholder="adventure title">
+            <input matInput  class="example-right-align" placeholder="Who played in the adventure?">
         </mat-form-field>
 
         <mat-form-field floatLabel="always" class="form-full-width">
             <mat-label>NPCs</mat-label>
-            <input matInput  class="example-right-align" placeholder="adventure title">
+            <input matInput  class="example-right-align" placeholder="Key NPCs in the adventure">
         </mat-form-field>
     </div>
     
