@@ -3,6 +3,22 @@ html {
   /* background-image: url("./assets/parchment.jpg"); */
   background-color: #ffe9ce;
   background-image: linear-gradient(#ffe9ce, #ad7a3c);
+  /* background-image: linear-gradient(rgb(238, 229, 146),
+    rgba(241, 144, 79, 0.493)
+  ); */
+
   height: 100%;
   /* font-family: "Lucida Handwriting"; */
+}
+
+mat-dialog-container {
+  background: #ffe9ce !important;
+}
+
+mat-calendar {
+  background: #ffe9ce !important;
+}
+
+button {
+  background-color: #ffd9aa;
 }

@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, Inject } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Adventure } from '../model/adventure';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute} from '@angular/router';
 import {  AdventureService } from '../adventure-service';
 
 @Component({

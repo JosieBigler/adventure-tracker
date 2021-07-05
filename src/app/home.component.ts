@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
       width: '350px',
-      data: {}
+      data: {},
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
 
 @Component({
   selector: 'dialog-overview-example-dialog',
-  templateUrl: './adventure/adventure-dialog.component.html',
+  templateUrl: './adventure/adventure-dialog.component.html'
 })
 export class DialogOverviewExampleDialog {
 
