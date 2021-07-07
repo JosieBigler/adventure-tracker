@@ -18,6 +18,11 @@
     <div class="box-title">
       NPCs 
     </div>
+    <div class="adventure-container">
+      <app-npc *ngFor="let npc of npcs"
+      [npc]="npc"
+      ></app-npc>
+    </div>
   </div>
 
   <div class="line-seperator content-to-hide"></div>

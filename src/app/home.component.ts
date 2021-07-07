@@ -1,7 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { Adventure } from './model/adventure';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import {  AdventureService } from './adventure-service';
+import {  DataService } from './adventure-service';
+import { Npc } from './model/npc';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +11,10 @@ import {  AdventureService } from './adventure-service';
 })
 export class HomeComponent implements OnInit {
   title = 'adventure-tracker';
-  adventures : Adventure[] = []
+  adventures : Adventure[] = [];
+  npcs: Npc[] = [];
 
-  constructor(@Inject(AdventureService) private adventureService : AdventureService, public dialog: MatDialog ) {}
+  constructor(@Inject(DataService) private dataService : DataService, public dialog: MatDialog ) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
@@ -21,12 +23,13 @@ export class HomeComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      this.adventureService.addAdventure(result);
+      this.dataService.addAdventure(result);
     });
   }
 
   ngOnInit() {
-    this.adventures = this.adventureService.getAdventures();
+    this.adventures = this.dataService.getAdventures();
+    this.npcs = this.dataService.getNpcs();
     };
 
 }

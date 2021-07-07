@@ -13,7 +13,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { AdventureDetailComponent } from './adventure/adventure-detail.component';
 import { AppComponent } from './app.component';
-import { AdventureService } from './adventure-service';
+import { DataService } from './adventure-service';
+import { NpcComponent } from './npc/npc-component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AdventureService } from './adventure-service';
     HomeComponent,
     AdventureComponent,
     DialogOverviewExampleDialog,
-    AdventureDetailComponent
+    AdventureDetailComponent,
+    NpcComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,7 @@ import { AdventureService } from './adventure-service';
     MatNativeDateModule,
     FormsModule
   ],
-  providers: [{provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}, AdventureService],
+  providers: [{provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

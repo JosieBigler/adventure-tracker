@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
 import { Adventure } from "./model/adventure";
-
+import { Npc } from "./model/npc";
 
 @Injectable()
-export class AdventureService {
+export class DataService {
     adventures: Adventure[] = [
       {
         id: 1,
@@ -19,6 +19,17 @@ export class AdventureService {
         id: 3,
         title: "third adventure",
         date: new Date("6/22/2021")
+      }
+    ]
+
+    npcs: Npc[] = [
+      {
+        id: 1,
+        name: "Bill"
+      },
+      {
+        id: 2,
+        name: "Jim"
       }
     ]
 
@@ -47,5 +58,13 @@ export class AdventureService {
       if(index > -1){
         this.adventures.splice(index, 1);
       }
+    }
+
+    getNpcs(): Npc[]{
+      return this.npcs;
+    }
+
+    getNpc(id: number): Npc {
+      return this.npcs.find(x => x.id ==id) || { id: 0, name: "" };
     }
   }
