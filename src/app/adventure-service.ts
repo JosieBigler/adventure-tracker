@@ -41,4 +41,11 @@ export class AdventureService {
         this.adventures[index] = adventure; 
       }
     }
+
+    deleteAdventure(adventure: Adventure) {
+      let index = this.adventures.findIndex(adv => adv.id == adventure.id);
+      if(index > -1){
+        this.adventures.splice(index, 1);
+      }
+    }
   }

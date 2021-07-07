@@ -1,14 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 html {
-  /* background-image: url("./assets/parchment.jpg"); */
   background-color: #ffe9ce;
   background-image: linear-gradient(#ffe9ce, #ad7a3c);
-  /* background-image: linear-gradient(rgb(238, 229, 146),
-    rgba(241, 144, 79, 0.493)
-  ); */
-
   height: 100%;
-  /* font-family: "Lucida Handwriting"; */
 }
 
 mat-dialog-container {
@@ -21,4 +15,7 @@ mat-calendar {
 
 button {
   background-color: #ffd9aa;
+  border-color: black;
+
+  border-radius: 8px;
 }

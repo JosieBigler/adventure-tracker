@@ -1,32 +1,36 @@
 <div class="container">
-    <button routerLink="" ng-click="saveAdventure()">Back and Save</button>
     <div class="form-container">
         <mat-form-field floatLabel="always" class="form-full-width">
             <mat-label>Title</mat-label>
             <input matInput  class="example-right-align" placeholder="adventure title" [(ngModel)]="adventure.title" >
         </mat-form-field>
-
+        
         <mat-form-field floatLabel="always" class="form-full-width">
             <mat-label>Date</mat-label>
             <input matInput [matDatepicker]="picker" [(ngModel)]="adventure.date" >
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker ></mat-datepicker>
         </mat-form-field>
-
+        
         <mat-form-field floatLabel="always" class="form-full-width">
             <mat-label>Synopsis</mat-label>
             <textarea matInput  class="example-right-align" placeholder="What happened in the adventure?" [(ngModel)]="adventure.synopsis"></textarea>
         </mat-form-field>
-
+        
         <mat-form-field floatLabel="always" class="form-full-width"> 
             <mat-label>Players</mat-label>
             <input matInput  class="example-right-align" placeholder="Who played in the adventure?">
         </mat-form-field>
-
+        
         <mat-form-field floatLabel="always" class="form-full-width">
             <mat-label>NPCs</mat-label>
             <input matInput  class="example-right-align" placeholder="Key NPCs in the adventure">
         </mat-form-field>
+
+        <div>
+            <button class="move-left" routerLink="" (click)="deleteAdventure()">X</button>
+            <button class="move-right" routerLink="" (click)="saveAdventure()" >Back and Save</button>
+        </div>
     </div>
     
 </div>

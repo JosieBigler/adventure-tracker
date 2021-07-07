@@ -19,7 +19,12 @@ ngOnInit() {
   };
 
   saveAdventure(){
+      console.log("does this trigger?");
       this.adventureService.updateAdventure(this.adventure);
+  }
+
+  deleteAdventure(){
+      this.adventureService.deleteAdventure(this.adventure);
   }
 }
 
